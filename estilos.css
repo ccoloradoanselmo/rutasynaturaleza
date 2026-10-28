@@ -1,3 +1,4 @@
+/* GENERAL */
 html {
     width: 1200px;
     margin: 0 auto;
@@ -11,15 +12,6 @@ body {
     font-family: Arial, Geneva, Tahoma, sans-serif;
 }
 
-div img {
-    width: 100%;
-}
-
-header {
-    padding: 20px;
-    height: 80px;            /* 80 + 20 + 20 = 120 total */
-    background-color: #205A82;
-}
 h1 {
     padding: 0;
     margin: 0;
@@ -30,27 +22,47 @@ h1 {
 h2 {
     padding: 0;
     margin: 0;
-    /* font-weight: bold; */
     font-size: 20px;
 }
 
+/* HEADER */
+header {
+    padding: 20px;
+    height: 80px; /* 80 + 20 + 20 = 120 */
+    background-color: #205A82;
+}
+
+header div {
+    float: left;
+    width: 300px;
+    height: 80px;
+    color: white;
+}
+
+header img {
+    float: right;
+    width: 170px;
+    height: 80px;
+}
+
+/* NAV */
 nav {
-    padding: 10px 20px;      /* 40 + 10 + 10 = 60 total */
-    height: 40px;
+    padding: 10px 20px;
+    height: 40px; /* 40 + 10 + 10 = 60 */
     background-color: #5AAFE0;
-    margin: 0;
 }
 
 nav ul {
-    width: 780px;            /* 4 × 120 + 3 × 100 */
-    margin: 0 auto;          /* centra el ul dentro del nav */
+    width: 780px; /* 4 × 120 + 3 × 100 */
+    margin: 0 auto;
     padding: 0;
     list-style: none;
 }
+
 nav li {
     float: left;
     width: 120px;
-    margin-right: 100px;     /* separación de la tabla */
+    margin-right: 100px;
 }
 
 nav li:last-child {
@@ -65,55 +77,180 @@ nav a {
     color: white;
     text-decoration: none;
     border-radius: 10px;
+    transition: background-color 0.4s ease-out, font-weight 0.1s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #07579B;  /* azul intenso */
+    background-color: #07579B;
     font-weight: bold;
 }
 
-
-.encabezado {
-    float: left;
-    width: 300px;
-    height: 80px;
-    color: white;
-    /* text-align: center; */
-}
-
-.montanasMinimalista {
-    float: right;
-    width: 170px;
-    height: 80px;
-
-}
-
-.principal {
+/* SECCION PRINCIPAL */
+#principal {
     padding: 20px;
-    height: 310px;           /* 310 + 20 + 20 = 350 total */
+    height: 310px; /* 310 + 20 + 20 = 350 */
     background-color: #FFFFFF;
 }
 
-.principal img {
+#principal img {
     float: left;
     width: 560px;
     height: 310px;
 }
 
-.bloqueTexto {
+#principal div {
     float: right;
-    width: 498px;            /* 498 + 20 + 20 + 1 + 1 = 540 */
-    height: 298px;           /* 298 + 5 + 5 + 1 + 1 = 310 */
+    width: 498px; /* 498 + 20 + 20 + 1 + 1 = 540 */
+    height: 298px; /* 298 + 5 + 5 + 1 + 1 = 310 */
     padding: 5px 20px;
     border: 1px solid #5AAFE0;
     background-color: #E5F2FC;
     color: #0f71b3;
 }
 
-.bloqueTexto h2 {
-    font-size: 24px;
+#principal p {
+    font-size: 18px;
 }
 
-.bloqueTexto p {
-    font-size: 18px;
+/* SECCION INFERIOR */
+#inferior {
+    padding: 15px 0 15px 20px;
+    height: 747px; /* 747 + 15 + 15 = 777 */
+    background-color: #FFFFFF;
+}
+
+/* FORMULARIO */
+#formulario {
+    float: left;
+    width: 428px; /* 428 + 20 + 20 + 1 + 1 = 470 */
+    padding: 20px;
+    border: 1px solid #5AAFE0;
+    background-color: #FFFFFF;
+}
+
+#formulario h2 {
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: #DCECF9;
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+}
+
+form > label {
+    clear: both;
+}
+
+form select,
+form input,
+form textarea,
+form button {
+    box-sizing: content-box;
+    display: block;
+    padding: 0 10px;
+    border: 1px solid #5AAFE0;
+    background-color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+form select {
+    width: 400px; /* 400 + 20 + 2 = 422 */
+    height: 58px; /* 58 + 2 = 60 */
+    margin-bottom: 30px;
+}
+
+form div {
+    float: left;
+    margin-bottom: 16px;
+}
+
+form div:first-of-type {
+    margin-right: 50px;
+}
+
+#fecha {
+    width: 198px; /* 198 + 20 + 2 = 220 */
+    height: 58px;
+}
+
+#personas {
+    width: 120px; /* 120 + 20 + 2 = 142 */
+    height: 58px;
+}
+
+form textarea {
+    width: 400px; /* 400 + 20 + 2 = 422 */
+    height: 58px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+form button {
+    width: 420px; /* 420 + 2 = 422 */
+    height: 58px; /* 58 + 2 = 60 */
+    padding: 0;
+    margin-bottom: 16px;
+    background-color: #2D9B48;
+    border-color: #2D9B48;
+    color: white;
+    transition: background-color 0.4s ease-out, border-color 0.4s ease-out, font-weight 0.1s ease-in-out;
+}
+
+form button:hover {
+    font-weight: bold;
+    background-color: #46f973;
+    border-color: #46f973;
+}
+
+/* BLOQUE SECUNDARIO */
+#secundario {
+    float: left;
+    width: 470px;
+    height: 747px; /* 411 + 25 + 311 */
+    margin-left: 20px;
+}
+
+#secundario img {
+    display: block;
+    width: 470px;
+    height: 411px;
+    margin-bottom: 25px;
+}
+
+#secundario div {
+    width: 420px; /* 420 + 25 + 25 = 470 */
+    height: 261px; /* 261 + 25 + 25 = 311 */
+    padding: 25px;
+    background-color: #E8F4E9;
+}
+
+#secundario h2 {
+    margin-bottom: 15px;
+}
+
+#secundario ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#secundario li::before {
+    content: "✓ ";
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    height: 40px; /* 40 + 20 + 20 = 80 */
+    background-color: #205A82;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    line-height: 40px;
 }

@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rutas&Naturaleza</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
     <header>
-        <div class="encabezado">
-            <h1> Rutas&Naturaleza </h1>
-            <h2> Descubre, Explora, Disfruta </h2>
+        <div>
+            <h1>Rutas&Naturaleza</h1>
+            <h2>Descubre. Explora. Disfruta.</h2>
         </div>
-        <div class="montanasMinimalista">
-            <img src="./img/montanasMinimalista.png">
-        </div>
+        <img src="./img/montanasMinimalista.png" alt="Icono de montañas">
     </header>
     <nav>
         <ul>
@@ -26,13 +24,58 @@
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <section class="principal">
+    <section id="principal">
         <img src="./img/paisaje.png" alt="Lago de montaña">
-        <div class="bloqueTexto">
+        <div>
             <h2>Tu próxima aventura te está esperando</h2>
             <p>Explora nuestras rutas de senderismo y descubre paisajes únicos...</p>
         </div>
     </section>
+
+    <section id="inferior">
+        <div id="formulario">
+            <h2>Reserva tu ruta</h2>
+            <form>
+                <label for="actividad">Actividad *</label>
+                <select id="actividad">
+                    <option>Selecciona una actividad</option>
+                    <option>Montaña</option>
+                    <option>Lago</option>
+                    <option>Mirador</option>
+                </select>
+
+                <div>
+                    <label for="fecha">Fecha *</label>
+                    <input type="text" id="fecha">
+                </div>
+                <div>
+                    <label for="personas">Nº personas *</label>
+                    <input type="text" id="personas">
+                </div>
+
+                <label for="comentarios">Comentarios (opcional)</label>
+                <textarea id="comentarios" placeholder="Escribe aquí tus comentarios..."></textarea>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
+
+        <div id="secundario">
+            <img src="./img/cartel.png" alt="Bosque y montañas">
+            <div>
+                <h2>¿Por qué elegimos?</h2>
+                <ul>
+                    <li>Rutas para todos los niveles</li>
+                    <li>Guías especializados</li>
+                    <li>Grupos reducidos</li>
+                    <li>Respeto por el medio ambiente</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Rutas&Naturaleza. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>
